@@ -1,4 +1,5 @@
-def check (dict,entry,entry1):
+def checkin (dict):
+    entry=input("enter your capitals or country:-")
     if entry in dict:
             print("country:" + entry + '-capital-' + dict[entry])
     elif entry in dict.values():
