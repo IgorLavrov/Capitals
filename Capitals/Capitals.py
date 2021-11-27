@@ -3,7 +3,7 @@ from module1 import*
 Capitals={"Russia":"Moscow","Ukraine":"Kiev","Estonia":"Tallinn", "Latvia":"Riga","Germany":"Berlin","France":"Paris"}
 
 def menu():
-        print("1-check capital or country,\n1-add to dictionary,\n3-correct data,\n4-check your knowledge")
+        print("1-check capital or country,\n2-add to dictionary,\n3-correct data,\n4-check your knowledge")
         print( "Choose your option")
 loop = 1
 choice = 0
