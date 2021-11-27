@@ -31,7 +31,7 @@ def correction(dict):
     
 import random
 def check(dict):
-   correct_count=1
+   correct_count=0
    print("enter 1 to  check capital, enter 2 to  check country")
    valik=input()
    if valik.lower()=="1":
@@ -60,6 +60,6 @@ def check(dict):
         else:
                     print("wrong")
                     print(x,"-->",name)
-   prin(correct_count)
-   total=5/correct_count*100 
+   print(correct_count)
+   total=(correct_count/5)*100 
    print("Procent of right answered",total)
