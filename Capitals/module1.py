@@ -1,33 +1,52 @@
+def list1(dict):
+    for key, value in dict.items():
+        print(key, ' : ', value)
+
 def checkin (dict):
-    entry=input("enter your capitals or country:-")
+    entry=input("Enter your capitals or country:-")
     if entry in dict:
             print("country:" + entry + '-capital-' + dict[entry])
     elif entry in dict.values():
         name = list(dict.keys())[list(dict.values()).index(entry)]
         print("country:"+name+"-capital-"+entry)
     else:
-            print(' no such country or capital' + entry)
-            add(dict)
-
+            print('No such country or capital:-' + entry)
+            answer=input("Please enter Y (To add), N(To quit),C(To correct) :-")
+            if answer.lower()=="y": 
+                add(dict)
+            elif answer.lower()=="c":
+                correction(dict)
+            else:
+               return None
 
 def add (dict):
     entry=input("Enter Country:-")
     entry1= input("Enter Capital:-")
     dict.update({entry:entry1})
-    print(dict)
+    list1(dict)
     
 def correction(dict):
-    entry= input("Enter you would like to delete ")
+    list1(dict)
+    entry= input("Enter what would  you like to delete ")
     if entry in dict:
         dict.pop(entry)
-        print("Make new entries")
+        print("Deleted-Please make new entries")
         add(dict)
+        print("Added")
     elif entry in dict.values():
         name2 = list(dict.keys())[list(dict.values()).index(entry)]
         dict.pop(name2)
-        print("Make new entries")
+        print("Deleted-Please make new entries")
         add(dict)
-    print(dict)
+        print("Added")
+    else:
+        print("no such country in the dictionary")
+        answer=input("Would you like to add it y/n:-")
+        if answer.lower()=="y": 
+                add(dict)
+        else:
+               return None
+    
     
 import random
 def check(dict):
