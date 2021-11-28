@@ -22,3 +22,5 @@ while loop == 1:
        check(Capitals)
     elif choice == 5:
         break
+    else:
+        print("Choose correct option")
